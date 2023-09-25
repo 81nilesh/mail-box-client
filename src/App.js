@@ -1,10 +1,11 @@
 import React from "react";
+import Header from "./Header";
 
 
 function App() {
   return (
     <div className="App">
-      <h1>We are developing gmail clone with react js</h1>
+      <Header />
     </div>
   );
 }
