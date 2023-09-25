@@ -1,11 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Emaillist from "./Emaillist";
 import Compose from "./Compose";
+import { selectSendMessageIsOpen } from "./features/mailSlice";
 
 
 function App() {
+  const isMessageOpen = useSelector(selectSendMessageIsOpen);
+
+  console.log(isMessageOpen);
   return (
     <div className="App">
       <Header />
@@ -14,8 +19,11 @@ function App() {
         <Sidebar />
         <Emaillist />
       </div>
+      {
+        isMessageOpen && <Compose />
+      }
 
-      <Compose />
+
 
     </div>
   );
