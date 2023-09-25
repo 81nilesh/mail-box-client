@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Emaillist from "./Emaillist";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
       <div className="app__body">
         <Sidebar />
+        <Emaillist />
       </div>
 
     </div>
